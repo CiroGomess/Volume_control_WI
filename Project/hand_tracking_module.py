@@ -6,22 +6,6 @@ import time     # check framerate
 from typing import Union
 
 
-'''
-Criando um módulo de tudo que aprendemos, para que não seja necessário repetir toooodo esse código quando formos usar
-Utilizaremos apenas requisições
-'''
-
-# Tipagem =================
-'''
-Type Hints podem ser usadas por ferramentas como IDEs e verificadores de tipo para fornecer informações adicionais sobre o código.
-    Por exemplo, uma IDE pode usar Type Hints para fornecer sugestões de código e verificar se você está usando o tipo correto de dados em uma variável.
-Type Hints podem ser usadas para documentar o código. Isso pode ser útil se você estiver trabalhando em um projeto com várias pessoas, 
-    pois permite que você especifique o tipo de dados que uma variável deve conter.
-Type Hints podem ser usadas para verificar se o código está usando o tipo correto de dados em uma variável. Isso pode ser útil para encontrar 
-    erros de digitação ou erros de lógica que podem ser difíceis de encontrar em tempo de execução.
-Type Hints podem ser usadas para otimizar o código em tempo de execução. Por exemplo, se você usar Type Hints para especificar que uma variável contém um número inteiro, 
-    o interpretador Python pode usar uma implementação mais rápida de operações matemáticas em vez de uma implementação genérica que funciona com qualquer tipo de dados.
-'''
 webcam_image = np.ndarray
 confidence = float
 coords_vector = Union[int, list[int]]
@@ -92,13 +76,7 @@ class VanzeDetector():
         return self.required_landmark_list
 
     def fingers_up(self):
-        '''
-        Para essa função devemos examinar a ponta do dedo do dedo que queremos verificar, para dar o veredito se ele está levantado ou não
-        Para isso, vamos analisar sempre a ponta do dedo e dois landmarks abaixo deste. Como por exemplo:
-        Se quero saber se o dedo indicador está pra cima, devo analisar o eixo y do LM 8 e do LM 6. Se o y_8 > y_6, significa que o dedo está levantado,
-            caso contrário, não está.
-        O conceito se repete para todos os outros dedos.
-        '''
+      
         fingers = []
 
         # dedão - analisado diferente por que o dedão se comporta de maneira diferente. Não desce no eixo y que nem os outros dedos
