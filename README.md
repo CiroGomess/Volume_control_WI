@@ -46,10 +46,7 @@ Distance between thumb and index finger is calculated and converted to a volume 
 - `mediapipe`: https://google.github.io/mediapipe/
 
 ## Author
-[CIRO GOMES]
-
-## License
-This project is licensed under the [MIT License](LICENSE).
+[CIRO GOMES 🧑‍💻]
 
 ## Contributions
 Contributions are welcome! Please read the [contribution guidelines](CONTRIBUTING.md) before starting any work.
